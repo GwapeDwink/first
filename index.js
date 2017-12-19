@@ -9,7 +9,7 @@ express()
   .use(express.static(path.join(__dirname, 'public')))
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
-  .get('/', function(req, res,next) {  
+  .get('/', function(req, res,next) {
       res.sendFile(__dirname + '/index.html');
   })
   .listen(PORT, () => console.log(`Listening on ${ PORT }`))
@@ -17,3 +17,5 @@ express()
   io.on('connection', function(socket){
     console.log('a user connected');
   });
+
+setInterval(() => io.emit('time', new Date().toTimeString()), 1000);
