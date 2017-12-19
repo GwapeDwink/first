@@ -1,23 +1,16 @@
 {
-  "name": "first",
+  "name": "test-socket",
   "version": "0.0.1",
-  "description": "This example accompanies the\r [Using WebSockets on Heroku with Node.js](https://devcenter.heroku.com/articles/node-websockets)\r tutorial.",
-  "main": "server.js",
+  "description": "My first socket.io app",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/GwapeDwink/first.git"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Gwapedwink",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/GwapeDwink/first/issues"
-  },
-  "homepage": "https://github.com/GwapeDwink/first#readme",
   "dependencies": {
+    "express": "^4.15.2",
     "socket.io": "^2.0.4"
   }
 }
