@@ -21,14 +21,6 @@
       <div class="container" id="messages-wrapper">
         <ul id="messages"></ul>
 
-        <script type="text/javascript">
-          var socket = io();
-          var el = document.getElementById('server-time');
-
-          socket.on('time', function(timeString) {
-            el.innerHTML = 'Server time: ' + timeString;
-          });
-        </script>
       </div>
 
       <form action="" id="input-form">
@@ -36,6 +28,8 @@
       </form>
 
     </section>
+
+    <script src="js/socket.io/socket.io.js"></script>
     <script>
       var socket = io();
     </script>

@@ -4,6 +4,7 @@ const PORT = process.env.PORT || 5000
 var http = require('http').Server(express);
 var io = require('socket.io')(http);
 
+express.use('/resources', express.static(path.join(__dirname, 'resources')))
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
