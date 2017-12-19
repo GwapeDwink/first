@@ -16,7 +16,6 @@
 
   </head>
   <body>
-
     <section class="d-flex flex-column h-100">
       <div class="container" id="messages-wrapper">
         <ul id="messages"></ul>
@@ -31,7 +30,10 @@
 
     <script src="js/socket.io/socket.io.js"></script>
     <script>
-      var socket = io();
+      var socket = io.connect('http://localhost:4200');
+      socket.on('connect', function(data) {
+          socket.emit('join', 'Hello World from client');
+      });
     </script>
   </body>
 </html>
