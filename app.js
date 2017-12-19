@@ -1,10 +1,4 @@
-const express = require('express')
-const path = require('path')
-const PORT = process.env.PORT || 5000
-
-express()
-  .use(express.static(path.join(__dirname, 'public')))
-  .set('views', path.join(__dirname, 'views'))
-  .set('view engine', 'ejs')
-  .get('/', (req, res) => res.render('pages/index'))
-  .listen(process.env.PORT || 5000)
+  var port = process.env.PORT || 3000;
+  app.listen(port, "0.0.0.0", function() {
+  console.log("Listening on Port 3000");
+  });

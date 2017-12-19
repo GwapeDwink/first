@@ -3,7 +3,8 @@
   "version": "0.3.0",
   "description": "First node deploy.",
   "engines": {
-    "node": "8.9.1"
+    "node": "8.9.1",
+    "npm": "4.6.1"
   },
   "main": "index.js",
   "scripts": {
